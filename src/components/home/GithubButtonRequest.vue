@@ -1,5 +1,5 @@
 <template>
-<div class="text-center ma-2">
+  <div class="text-center ma-2">
     <v-btn :loading="loading" @click="requestGithub">
       Request github
     </v-btn>
@@ -19,7 +19,7 @@ const { $api } = useNuxtApp()
 let loading = ref(false);
 let fullname = ref('');
 
-function sleep (waitTimeInMs) {
+function sleep(waitTimeInMs) {
   return new Promise(resolve => setTimeout(resolve, waitTimeInMs));
 }
 
@@ -30,7 +30,7 @@ async function requestGithub() {
     loading.value = true
 
     await sleep(1000);
-    
+
     res = await $api({
       method: 'GET',
       url: '/users/felixleo22',
@@ -45,8 +45,7 @@ async function requestGithub() {
   if (res?.data?.name) {
     snackStore.success(t('request.success'))
   }
-  
-  fullname.value = res?.data?.name
 
+  fullname.value = res?.data?.name
 }
 </script>
