@@ -14,8 +14,13 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   i18n: {
-    vueI18n: './plugins/i18n.ts'
+    vueI18n: './plugins/i18n.js'
   },
+  plugins: [
+    '~/plugins/api',
+    '~/plugins/i18n',
+    '~/plugins/vuetify'
+  ],
   css: [
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
