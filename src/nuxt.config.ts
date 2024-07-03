@@ -14,11 +14,10 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   i18n: {
-    vueI18n: './plugins/i18n.js'
+    vueI18n: './config/i18n.js'
   },
   plugins: [
     '~/plugins/api',
-    '~/plugins/i18n',
     '~/plugins/vuetify'
   ],
   css: [
