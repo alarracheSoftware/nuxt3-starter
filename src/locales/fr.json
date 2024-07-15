@@ -12,14 +12,22 @@
     "dark": "Thème sombre",
     "light": "Thème clair"
   },
-  "request": {
-    "info": "Vous avez lancé une requête à Github",
-    "success": "La requête a réussi",
-    "error": "Impossible de requêter Github"
+  "snack": {
+    "github": {
+      "info": "Vous avez lancé une requête à Github.",
+      "success": "La requête a réussi.",
+      "error": "La requête a échoué."
+    },
+    "dialog": {
+      "yes": "Vous avez dit oui.",
+      "no": "Vous avez dit non."
+    }
   },
-  "snackbar": {
-    "button": "Ouvrir une snack",
-    "open": "Je suis une snack"
+  "dialog": {
+    "title": "Supprimer la donnée.",
+    "delete": "Voulez-vous supprimer ?"
   },
+  "yes": "oui",
+  "no": "non",
   "development": "Développement"
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="text-center ma-2">
-    <v-btn :loading="loading" @click="requestGithub">
+    <v-btn class="my-4" :loading="loading" @click="requestGithub">
       Request github
     </v-btn>
-    <p> Fullname : {{ fullname }} </p>
+    <p> name : {{ name }} </p>
   </div>
 </template>
 
@@ -12,40 +12,45 @@
 import { ref } from 'vue';
 import { useSnacksStore } from '@/store/snacks'
 
+const runtimeConfig = useRuntimeConfig()
+
 const snackStore = useSnacksStore()
 const { t } = useI18n()
-const { $api } = useNuxtApp()
 
 let loading = ref(false);
-let fullname = ref('');
+let name = ref('');
 
 function sleep(waitTimeInMs) {
   return new Promise(resolve => setTimeout(resolve, waitTimeInMs));
 }
 
 async function requestGithub() {
-  let res;
+  let result;
+  snackStore.info(t('snack.github.info'))
   try {
-    snackStore.info(t('request.info'))
     loading.value = true
 
     await sleep(1000);
 
-    res = await $api({
-      method: 'GET',
-      url: '/users/felixleo22',
+    const { data } = await useFetch(`${runtimeConfig.public.APIHost}/users/felixleo22`, {
+      method: 'GET'
     });
+
+    result = data.value
+
+    console.log(result);
+
   } catch (err) {
     console.log(err);
-    snackStore.error(t('request.error'))
+    snackStore.error(t('snack.github.error'))
   }
 
   loading.value = false
 
-  if (res?.data?.name) {
-    snackStore.success(t('request.success'))
+  if (result?.name) {
+    snackStore.success(t('snack.github.success'))
   }
 
-  fullname.value = res?.data?.name
+  name.value = result?.name
 }
 </script>

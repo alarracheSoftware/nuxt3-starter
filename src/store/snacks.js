@@ -3,18 +3,6 @@ import { defineStore } from 'pinia'
 export const useSnacksStore = defineStore('snacks', () => {
   const messages = ref([])
 
-  function error(text) {
-    addMessage({ text, color: 'error'})
-  }
-
-  function info(text) {
-    addMessage({ text, color: 'info'})
-  }
-
-  function success(text) {
-    addMessage({ text, color: 'success'})
-  }
-
   function addMessage(message) {
     if (typeof message !== 'object') { return }
 
@@ -25,6 +13,18 @@ export const useSnacksStore = defineStore('snacks', () => {
     }
 
     messages.value.push(msg)
+  }
+
+  function error(text) {
+    addMessage({ text, color: 'error'})
+  }
+
+  function info(text) {
+    addMessage({ text, color: 'info'})
+  }
+
+  function success(text) {
+    addMessage({ text, color: 'success'})
   }
 
   function removeMessage() {

@@ -2,7 +2,7 @@
 A frontend starter with nuxt3 and essential plugins.
 
 ## prerequis
-- node 18
+- node 20
 
 ## Plugins installed
 - Vite (builder)
@@ -10,7 +10,6 @@ A frontend starter with nuxt3 and essential plugins.
 - Material design icons (icons)
 - i18n (internationalization)
 - Pinia (Store)
-- Axios (HTTP client)
 
 ## Default components
 - App Bar
@@ -18,4 +17,8 @@ A frontend starter with nuxt3 and essential plugins.
 - Router
 - Dark theme
 - Reusable Snack that works with Pinia
+- Reusable confirm dialog that works with Pinia
 
+## Example
+
+![example](./docs/example.gif)
