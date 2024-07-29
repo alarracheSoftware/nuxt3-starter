@@ -36,7 +36,6 @@ async function requestGithub() {
     });
 
   } catch (err) {
-    console.log(err);
     snackStore.error(t('snack.github.error'))
   }
 
