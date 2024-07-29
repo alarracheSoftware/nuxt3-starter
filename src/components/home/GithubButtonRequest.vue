@@ -9,10 +9,7 @@
 
 <script setup>
 
-import { ref } from 'vue';
-import { useSnacksStore } from '@/store/snacks'
-
-const runtimeConfig = useRuntimeConfig()
+const { $fetch } = useNuxtApp();
 
 const snackStore = useSnacksStore()
 const { t } = useI18n()
@@ -25,20 +22,18 @@ function sleep(waitTimeInMs) {
 }
 
 async function requestGithub() {
-  let result;
+  let data;
+
   snackStore.info(t('snack.github.info'))
+
   try {
     loading.value = true
 
     await sleep(1000);
 
-    const { data } = await useFetch(`${runtimeConfig.public.APIHost}/users/felixleo22`, {
+    data = await $fetch('/users/felixleo22', {
       method: 'GET'
     });
-
-    result = data.value
-
-    console.log(result);
 
   } catch (err) {
     console.log(err);
@@ -47,10 +42,10 @@ async function requestGithub() {
 
   loading.value = false
 
-  if (result?.name) {
+  if (data?.name) {
     snackStore.success(t('snack.github.success'))
   }
 
-  name.value = result?.name
+  name.value = data?.name
 }
 </script>

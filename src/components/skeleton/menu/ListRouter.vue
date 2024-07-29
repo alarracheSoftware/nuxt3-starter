@@ -10,15 +10,12 @@
 
 <script setup>
 
-import { computed } from 'vue';
-
 const { t } = useI18n()
 
 const routers = computed(() => {
   return [
     { text: t('menu.home'), icon: 'mdi-view-dashboard', path: '/', },
-    { text: t('menu.first'), icon: 'mdi-code-json', path: '/page1', },
-    { text: t('menu.second'), icon: 'mdi-server', path: '/page2', },
+    { text: t('menu.first'), icon: 'mdi-code-json', path: '/page', },
   ]
 })
 

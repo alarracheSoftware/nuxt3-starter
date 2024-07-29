@@ -10,10 +10,6 @@
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia'
-import { computed, watch } from 'vue';
-import { useSnacksStore } from '@/store/snacks'
-import { ref } from 'vue'
 
 const snackStore = useSnacksStore()
 

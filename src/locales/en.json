@@ -5,9 +5,9 @@
     "first": "First page",
     "second": "Second page"
   },
-  "page1": "English text for first page.",
-  "page2": "English text for second page.",
-  "link": "The guy who did that <a href=\"{githubProfileURL}\" target=\"_blank\">is him</a>",
+  "page": "English text for this page.",
+  "link": "The guy who did that {isHim}",
+  "isHim": "is him",
   "theme": {
     "dark": "Dark theme",
     "light": "Light theme"

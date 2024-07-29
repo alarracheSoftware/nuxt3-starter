@@ -4,8 +4,8 @@
       <NuxtLayout>
         <SkeletonAppBar @menuUpdate="updateVisibleMenu()" />
         <SkeletonAppMenu v-model="visible" />
-        <SkeletonSnackbar />
-        <SkeletonConfirmDialog />
+        <Snackbar />
+        <ConfirmDialog />
         <v-main>
           <NuxtPage />
         </v-main>
@@ -15,8 +15,6 @@
 </template>
 
 <script setup>
-
-import { ref } from 'vue';
 
 let visible = ref(false);
 

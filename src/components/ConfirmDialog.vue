@@ -37,8 +37,6 @@
 
 <script setup>
 
-import { useDialogStore } from '@/store/dialog'
-
 const dialogStore = useDialogStore();
 
 const disagreeLoading = ref(false);

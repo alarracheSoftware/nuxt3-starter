@@ -8,8 +8,6 @@
 
 <script setup>
 
-import { computed } from 'vue';
-
 const runtimeConfig = useRuntimeConfig()
 
 const i18n = useI18n()

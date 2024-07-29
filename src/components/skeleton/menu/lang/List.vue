@@ -11,8 +11,6 @@
   
 <script setup>
 
-import { ref } from 'vue';
-
 import frFlag from '@/static/images/lang/fr.png';
 import enFlag from '@/static/images/lang/en.png';
 

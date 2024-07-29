@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="text-center ma-2">
-    <p> {{ t("page1")}} </p>
+    <p> {{ t("page")}} </p>
       <v-btn class="my-4" :loading="loading" @click="openDialog">
         Open yes/no dialog
       </v-btn>
@@ -11,13 +11,12 @@
 
 <script setup>
 
-const { t } = useI18n()
-
-import { useDialogStore } from '@/store/dialog'
-import { useSnacksStore } from '@/store/snacks'
+const { t } = useI18n();
 
 const { openConfirm } = useDialogStore();
-const snackStore = useSnacksStore()
+const snackStore = useSnacksStore();
+
+const loading = ref(false);
 
 function openDialog(items) {
   openConfirm({
