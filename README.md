@@ -5,11 +5,11 @@ A frontend starter with nuxt3 and essential plugins.
 - node 20
 
 ## Plugins installed
-- Vite (builder)
-- Vuetify 3 (css)
-- Material design icons (icons)
-- i18n (internationalization)
-- Pinia (Store)
+- Builder : **Vite**
+- CSS : **Vuetify 3**
+- Icons : **Material design icons - mdi**
+- internationalization : **i18n**
+- Store : **Pinia** 
 
 ## Default components
 - App Bar

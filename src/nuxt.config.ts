@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     public: {
       environment: process.env.ENVIRONMENT || 'dev',
       version: process.env.VERSION || 'dev',
-      APIHost: process.env.API_HOST || 'https://api.github.com',
+      APIURL: process.env.API_URL || 'https://api.github.com',
       githubProfileURL: process.env.GITHUB_PROFILE_URL || 'https://github.com/felixleo22',
       githubRepoURL: process.env.GITHUB_REPO_URL || 'https://github.com/alarracheSoftware/nuxt3-starter',
     }
