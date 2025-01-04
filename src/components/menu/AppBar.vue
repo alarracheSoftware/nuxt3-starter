@@ -10,16 +10,8 @@
 
 const runtimeConfig = useRuntimeConfig()
 
-const i18n = useI18n()
-
 const title = computed(() => {
-  if (runtimeConfig.public.environment === 'integration') {
-    return `App ${i18n.t('integration')}`
-  }
-  if (runtimeConfig.public.environment === 'production') {
-    return 'App'
-  }
-  return `App ${i18n.t('development')}`
+  return `App ${runtimeConfig.public.environment}`
 });
 
 const emit = defineEmits({

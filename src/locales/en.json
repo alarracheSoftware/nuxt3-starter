@@ -2,11 +2,10 @@
   "language": "Language",
   "menu": {
     "home": "Home",
-    "first": "First page",
-    "second": "Second page"
+    "first": "First page"
   },
-  "page": "English text for this page.",
-  "link": "The guy who did that {isHim}",
+  "page": "English text.",
+  "link": "The guy who did that {isHim}.",
   "isHim": "is him",
   "theme": {
     "dark": "Dark theme",
@@ -15,7 +14,7 @@
   "snack": {
     "github": {
       "info": "You started request Github.",
-      "success": "the request was successful.",
+      "success": "The request was successful.",
       "error": "Request failed."
     },
     "dialog": {
@@ -23,11 +22,11 @@
       "no": "You said no."
     }
   },
+  "confirmDialog": "Open confirm dialog",
   "dialog": {
-    "title": "Delete data",
-    "delete": "Do you really want it ?"
+    "title": "Confirm dialog",
+    "delete": "Do you want it ?"
   },
   "yes": "yes",
-  "no": "no",
-  "development": "Development"
+  "no": "no"
 }

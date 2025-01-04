@@ -3,7 +3,7 @@
     <div class="text-center ma-2">
     <p> {{ t("page")}} </p>
       <v-btn class="my-4" :loading="loading" @click="openDialog">
-        Open yes/no dialog
+        {{ t("confirmDialog")}}
       </v-btn>
     </div>
   </section>

@@ -13,7 +13,7 @@
         <v-spacer />
 
         <v-btn
-          :text="dialogStore.data.disagreeText || $t('cancel')"
+          :text="dialogStore.data.disagreeText || t('cancel')"
           :prepend-icon="dialogStore.data.disagreeIcon"
           :disabled="agreeLoading"
           :loading="disagreeLoading"
@@ -22,7 +22,7 @@
           @click="cancel()"
         />
         <v-btn
-          :text="dialogStore.data.agreeText || $t('confirm')"
+          :text="dialogStore.data.agreeText || t('confirm')"
           :prepend-icon="dialogStore.data.agreeIcon"
           :disabled="disagreeLoading"
           :loading="agreeLoading"
@@ -36,6 +36,8 @@
 </template>
 
 <script setup>
+
+const { t } = useI18n();
 
 const dialogStore = useDialogStore();
 

@@ -2,11 +2,10 @@
   "language": "Langue",
   "menu": {
     "home": "Accueil",
-    "first": "Première page",
-    "second": "Deuxième page"
+    "first": "Première page"
   },
-  "page": "Texte français pour la cette page",
-  "link": "Le gars qui à fait ça {isHim}",
+  "page": "Texte français.",
+  "link": "Le gars qui à fait ça {isHim}.",
   "isHim": "c'est lui",
   "theme": {
     "dark": "Thème sombre",
@@ -23,11 +22,11 @@
       "no": "Vous avez dit non."
     }
   },
+  "confirmDialog": "Ouvrir le dialog de confirmation",
   "dialog": {
-    "title": "Supprimer la donnée.",
-    "delete": "Voulez-vous supprimer ?"
+    "title": "Dialogue de confirmation",
+    "delete": "Tu le veux ?"
   },
   "yes": "oui",
-  "no": "non",
-  "development": "Développement"
+  "no": "non"
 }

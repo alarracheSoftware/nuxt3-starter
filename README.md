@@ -1,7 +1,7 @@
 # Nuxt 3 Starter
 A frontend starter with nuxt3 and essential plugins.
 
-## prerequis
+## Requisites
 - node 20
 
 ## Plugins installed
@@ -16,7 +16,7 @@ A frontend starter with nuxt3 and essential plugins.
 - Open-close App Menu
 - Router
 - Dark theme
-- Reusable Snack that works with Pinia
+- Reusable snack that works with Pinia
 - Reusable confirm dialog that works with Pinia
 
 ## Example

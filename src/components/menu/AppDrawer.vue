@@ -1,12 +1,12 @@
 <template>
   <v-navigation-drawer :value="visible" width="300" @input="updateVisible($event)" clipped app
     fixed disable-resize-watcher disable-route-watcher>
-    <SkeletonMenuListRouter />
-    <SkeletonMenuLangMenu />
+    <MenuListRouter />
+    <MenuLangMenu />
     <v-spacer />
     <template #append>
-      <SkeletonMenuThemeButton />
-      <SkeletonMenuGithubButton />
+      <MenuThemeButton />
+      <MenuGithubButton />
     </template>
   </v-navigation-drawer>
 </template>

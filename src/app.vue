@@ -2,8 +2,8 @@
   <v-app>
     <ClientOnly>
       <NuxtLayout>
-        <SkeletonAppBar @menuUpdate="updateVisibleMenu()" />
-        <SkeletonAppMenu v-model="visible" />
+        <MenuAppBar @menuUpdate="updateVisibleMenu()" />
+        <MenuAppDrawer v-model="visible" />
         <Snackbar />
         <ConfirmDialog />
         <v-main>
